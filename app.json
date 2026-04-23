@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "E Hazri",
+    "slug": "mobile-hr-system",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.euphoria.eHazri",
+      "buildNumber": "7",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app uses Face ID for secure authentication. Face ID data is used solely for the purpose of allowing access to the app's features and is not stored or shared with any third parties."
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "softwareKeyboardLayoutMode": "pan",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.euphoriahrms.euxr",
+      "versionCode": 4,
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "96b99907-531e-444b-815a-691ee6faddeb"
+      },
+      "apiUrl": "process.env.API_URL",
+      "authToken": "process.env.AUTH_TOKEN"
+    },
+    "plugin": [
+      [
+        ["expo-camera", "expo-local-authentication"],
+        {
+          "faceIDPermission": "Allow E Hazri to use Face ID.",
+          "cameraPermission": "Allow E Hazri to access your camera."
+        }
+      ],
+      "expo-camera"
+    ],
+    "owner": "awais.majid"
+  }
+}
